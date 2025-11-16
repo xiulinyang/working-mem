@@ -5,7 +5,7 @@ This repository replicate the experiments for training the Critical Period-inspi
 
 >[Masato Mita, Ryo Yoshida, Yohei Oseki. Developmentally-plausible Working Memory Shapes a Critical Period for Language Acquisition. ACL2025.](https://aclanthology.org/2025.acl-long.462/)
 
-
+❗❗I only revised the code for DynamicLimit-Exp and NoLimit experiments. If you want to run the other two experiments, please run the code with caution. ❗❗
 
 # Installation
 This repository uses a customized version of [Hugging Face Transformers](https://github.com/huggingface/transformers) (with custom modules like `modeling_gpt2_alibi_exponential.py`).  
