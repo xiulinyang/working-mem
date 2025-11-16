@@ -1,6 +1,4 @@
 # working-mem
-
-# Critical Period-inspired Language Model (CPLM)
 This repository replicate the experiments for training the Critical Period-inspired Language Model.
 
 >[Masato Mita, Ryo Yoshida, Yohei Oseki. Developmentally-plausible Working Memory Shapes a Critical Period for Language Acquisition. ACL2025.](https://aclanthology.org/2025.acl-long.462/)
