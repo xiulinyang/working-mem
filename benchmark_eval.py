@@ -2,6 +2,7 @@ from minicons import scorer
 import argparse
 from huggingface_hub import list_repo_refs
 from transformers import AutoTokenizer, AutoModelForCausalLM, GPT2Config
+from transformers.models.gpt2.modeling_gpt2_alibi_exponential import GPT2LMHeadModel
 from glob import glob
 from pathlib import Path
 from tqdm import tqdm
@@ -91,8 +92,19 @@ if __name__ == '__main__':
     model_name_name = model_name.split('/')[-1]
     f_results = {}
     print(model_name)
-    ilm_model = scorer.IncrementalLMScorer(model_name, 'cuda')
+    if 'dynamic' in model_name:
+        model = GPT2LMHeadModel.from_pretrained(model_name)
+    else:
+        model =  AutoModelForCausalLM.from_pretrained(model_name)
+
+    model.eval()
+
     tokenizer = AutoTokenizer.from_pretrained(model_name)
+    ilm_model = scorer.IncrementalLMScorer(
+        model,
+        tokenizer=tokenizer,
+        device="cuda"
+    )
     acc, dist = eval_sent_pair(ilm_model, tokenizer, test)
     f_results['best'] = acc
     pd.DataFrame(f_results).to_csv(f'{dataset}_results/results_{model_name_name}_best.csv')
