@@ -2,7 +2,8 @@ from minicons import scorer
 import argparse
 from huggingface_hub import list_repo_refs
 from transformers import AutoTokenizer, AutoModelForCausalLM, GPT2Config
-from transformers.models.gpt2.modeling_gpt2_alibi_exponential import GPT2LMHeadModel
+# from transformers.models.gpt2.modeling_gpt2_alibi_exponential import GPT2LMHeadModel
+from transformers.models.gpt2.modeling_gpt2 import GPT2LMHeadModel
 from glob import glob
 from pathlib import Path
 from tqdm import tqdm
@@ -92,7 +93,7 @@ if __name__ == '__main__':
     model_name_name = model_name.split('/')[-1]
     f_results = {}
     print(model_name)
-    if 'dynamic' in model_name:
+    if 'linear' in model_name:
         model = GPT2LMHeadModel.from_pretrained(model_name)
     else:
         model =  AutoModelForCausalLM.from_pretrained(model_name)
