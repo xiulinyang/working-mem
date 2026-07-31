@@ -33,7 +33,7 @@ def read_data(data_path, dataset_name):
             sent_pair = [(x['sentence_bad'], x['sentence_good']) for x in phenomenon]
             test_set[phenomenon_n] = sent_pair
             print(len(test_set[phenomenon_n]))
-    elif dataset_name in ['scamp_plausible', 'scamp_implausible']:
+    elif dataset_name in ['scamp_plausible', 'scamp_implausible','multiblimp']:
         phenomenon_paths = glob(f'{data_path}/*.tsv')
         for p in tqdm(phenomenon_paths):
             phenomenon = p.split('/')[-1].split('.')[0]
