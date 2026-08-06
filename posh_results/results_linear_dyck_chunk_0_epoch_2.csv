@@ -1,0 +1,10 @@
+,epoch_2
+island-adjunct,0.706
+island-complex-np,0.548
+island-wh,0.894
+principle_a_command,0.516
+principle_a_locality,0.418
+question-formation_or,0.514
+question-formation_rr,0.488
+question-formation_sr,0.452
+wanna,0.02
