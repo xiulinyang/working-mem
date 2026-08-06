@@ -16,9 +16,9 @@ filler-gap-wh_question_object,0.298
 filler-gap-wh_question_subject,1.0
 irregular-verb,0.507
 island-effects-adjunct_island,0.6255
-island-effects-coordinate_structure_constraint,0.212
+island-effects-coordinate_structure_constraint,0.2275
 local_attractor-in_question_with_aux,0.814
-npi_licensing-matrix_question,0.397
+npi_licensing-matrix_question,0.3115
 npi_licensing-only_npi_licensor,0.133
 quantifiers-existential_there,0.8185
 quantifiers-superlative,0.4005

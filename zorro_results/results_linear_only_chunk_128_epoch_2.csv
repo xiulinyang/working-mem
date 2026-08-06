@@ -12,13 +12,13 @@ argument_structure-transitive,0.534
 binding-principle_a,0.451
 case-subjective_pronoun,0.595
 ellipsis-n_bar,0.238
-filler-gap-wh_question_object,0.337
+filler-gap-wh_question_object,0.3365
 filler-gap-wh_question_subject,0.9995
 irregular-verb,0.5075
 island-effects-adjunct_island,0.5415
-island-effects-coordinate_structure_constraint,0.4535
+island-effects-coordinate_structure_constraint,0.458
 local_attractor-in_question_with_aux,0.795
-npi_licensing-matrix_question,0.725
+npi_licensing-matrix_question,0.6365
 npi_licensing-only_npi_licensor,0.768
 quantifiers-existential_there,0.775
 quantifiers-superlative,0.0385
